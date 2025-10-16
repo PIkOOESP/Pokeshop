@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -12,13 +15,14 @@
         </style>
     </head>
     <body>
+        <a href="sesion/destruir_sesion.php">Destruir sesion</a>
         <!--Учитель es maestro en ruso-->
         <h1>Pokemon Учитель</h1>
         <p>Web no oficial de venta de cartas Pokemon</p>
 
         <div class="card">
             <h2>Menu cutre principal</h2>
-            <a href="crear_cookie.php">Catalogo</a><br>
+            <a href="/interaccion/catalogo.php">Catalogo</a><br>
             <a href="leer_cookie.php">Leer cookie</a><br>
             <a href="actualizar_cookie.php">Actualizar cookie</a><br>
             <a href="borrar_cookie.php">Borrar cookie</a>

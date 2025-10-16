@@ -15,6 +15,7 @@ include("../datos/cartas.php");
         <title>Catalogo</title>
     </head>
     <body>
+        <a href="../index.php">Inicio</a>
         <h1>Catalogo completo de la tienda</h1>
         <p>Aqui se puede ver el catalogo integro de la tienda</p>
         <div class="card">
