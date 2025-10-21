@@ -15,6 +15,7 @@ session_start();
         </style>
     </head>
     <body>
+        <a href="sesion/sesion.php">Iniciar sesion</a>
         <a href="sesion/destruir_sesion.php">Destruir sesion</a>
         <!--Учитель es maestro en ruso-->
         <h1>Pokemon Учитель</h1>
