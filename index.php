@@ -1,32 +1,37 @@
 <?php
 session_start();
+
+if(isset($_POST['user']) && !empty($_POST['user'])){
+    $_SESSION['user'] = $_POST['user'];
+}
+
+if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
+    header("Location:catalogo.php");
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <title>Pokemon Учитель</title>
+        <title>Pokeshop</title>
         <style>
-            body { font-family: system-ui; background: #2d2d2dff; padding: 2rem; color:#ffffffff }
-            h1 { color: #ffffffff; }
-            .card { background: #2d2d2dff; padding: 1rem; margin: 1rem 0; border-radius: 10px; }
-            a { display: inline-block; margin: .3rem 0; color: #0077cc; text-decoration: none; }
-            a:hover { text-decoration: underline; }
+            body {background: #2d2d2dff; color: #ffffffff }
         </style>
     </head>
     <body>
-        <a href="sesion/sesion.php">Iniciar sesion</a>
-        <a href="sesion/destruir_sesion.php">Destruir sesion</a>
-        <!--Учитель es maestro en ruso-->
-        <h1>Pokemon Учитель</h1>
-        <p>Web no oficial de venta de cartas Pokemon</p>
+        <div class="login">
+            <div class="login_titulo">
+                <h1>Tienda de cartas Pokemon</h1>
+            </div>
+            <div class="login_cuerpo">
+                <form action="index.php" method="post">
+                    <label for="user">Usuario</label>
+                    <input type="text" name="user" id="user">
 
-        <div class="card">
-            <h2>Menu cutre principal</h2>
-            <a href="/interaccion/catalogo.php">Catalogo</a><br>
-            <a href="leer_cookie.php">Leer cookie</a><br>
-            <a href="actualizar_cookie.php">Actualizar cookie</a><br>
-            <a href="borrar_cookie.php">Borrar cookie</a>
-        </div>
+                    <input type="submit" value="Entrar">
+                </form>    
+            </div>
+        </div> 
     </body>
 </html>
