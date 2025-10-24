@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("include/cartas.php");
+include("include/header.php");
 ?>
 
 <!DOCTYPE html>
@@ -9,6 +10,7 @@ include("include/cartas.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
+
 </head>
 <body>
     <div class="carrito_titulo">
